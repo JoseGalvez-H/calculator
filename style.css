@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Josefin Sans", sans-serif;
+    display: grid;
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,0.11436449579831931) 100%);   
+    /* flex-direction: center; */
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    /* gap: 10px; */
+    
+}
+
+header {
+    font-size: 4vmin;
+    letter-spacing: 1vmin;
+    color: white;
+    align-items: center;
+    margin-top: 6vmin;
+    margin-bottom: 2vmin;
+}
+
+div {
+    border: 1px solid black;
+    border-radius: 3%;
+    background-color: aliceblue;
+}
+
+#numbers > div:hover,
+#operators > div:hover {
+    cursor: pointer;
+}
+
+.button:hover {
+    cursor: pointer;
+    background: grey;
+}
+
+
+#display {
+    border: 1vmin solid grey;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 100px;
+    /* margin-top: 40px; */
+}
+
+#calculator {
+    display: grid;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    grid-template-areas:
+        'output'
+        'numbers' 
+        'operators'
+        'clear equal';
+    align-items: center;
+    justify-content: center;
+    padding: 10vmin;
+}
+
+#numbers, #operators {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+}
+
+#numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 10vmin);
+    grid-template-rows: repeat(4, 15vmin);
+    gap: 5vmin;
+
+}
+
+#numbers > div {
+    border: 0.1vmin solid grey;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 10vmin;
+    margin-top: 40px;
+}
+
+#operators {
+    /* display: grid; */
+    grid-template-columns: repeat(4, 10vmin);
+    /* grid-template-rows: repeat(4, 16vmin); */
+    gap: 1vmin;
+    padding: 10px;
+}
+
+#operators > div {
+    display: grid;
+    border: 0.1vmin solid grey;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 9vmin;
+    align-items: center;
+    margin-top: 40px;
+} 
+
+
+#output {
+    display: grid;
+    border-radius: 2%;
+    grid-template-columns: repeat(1, 30vmin);
+    grid-template-rows: 1;
+    border: 0.1vmin solid rgb(164, 17, 17);
+    text-align: right;
+    gap: 1vmin;
+    font-size: 100px;
+    padding: 10px;
+}
+
+/* #output > div {
+    text-align: center;
+    font-size: 100px;
+    margin-top: 40px;
+} */
+
+button {
+    border: 3vmin;
+    border-radius: 25%;
+    cursor: pointer;
+}
